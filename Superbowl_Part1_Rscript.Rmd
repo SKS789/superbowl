@@ -1,0 +1,128 @@
+---
+title: "Superbowl_Rscript_Answers"
+author: "YOUR NAME HERE"
+date: "ADD THE DATE"
+output:
+  html_document: default
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+Use control+Enter to run the code chunks on PC.
+Use  command+Enter to run the code chunks on MAC.
+
+## Load Packages
+
+In this section, we install and load the necessary packages. 
+
+```{r libraries, message=FALSE, include = FALSE}
+### Install packages. If you haven't install the dplyr package, please uncomment the line below to install it. 
+#Attention: Before knitting, make sure to comment out the following line.
+#install.packages('dplyr') # required only once.
+
+### load libraries for use in current working session
+library('dplyr')
+
+```
+
+## Import Data
+
+In this section, we import the necessary data for this lab.
+
+```{r import, include=FALSE}
+### set your working directory
+# use setwd to set your working directory
+
+# you can also go to session-> set working directory -> choose directory
+# working directory is the path to the folder and not file
+
+# make sure the path of the directory is correct, i.e., where you have stored your data
+
+setwd("C:/Users/sansar13/Documents/mgt585/data")
+
+### import data file
+# read the movies file using read.csv
+superbowl <- read.csv(file = "superbowl.csv",fileEncoding = 'UTF-8-BOM')
+
+```
+
+# Homework Assignment 1: Super Bowl Caselet (Part 1)
+
+You are hired as a Business Analyst to help the manager to find out if spending millions of dollars on Super Bowl ads creates social media buzz.
+
+As a first step, carry out the analysis using DPLYR using superbowl.csv data. There are some questions below that you need to answer.
+
+## Dataset Exploration
+```{r explore}
+
+# Use five functions dim(), colnames(), str(), head() and tail() to explore all the superbowl table
+# observe different columns of the table and values in the rows
+# type your answer below this line
+
+
+
+# tell R, new_brand, month and superbowl columns are factor 
+
+
+
+# tell R, week_of is date of format "%d-%b-%y"
+
+
+
+# you can try and experiment with different date formats here: 
+# https://campus.datacamp.com/courses/intermediate-r-for-finance/dates?ex=6
+
+
+```
+
+## Five Functions of DPLYR
+
+```{r DPLYR Basics}
+
+# Query 1. Filter all rows where new_brand == 'Beetle'
+# type your answer below this line
+
+
+
+# interpret the results:
+
+################################################################################
+
+# Query 2.Select all the columns related to buzz metrics (volume, positive and negative mentions)
+# type your answer below this line
+
+
+
+# interpret the results:
+
+################################################################################
+
+# Query 3. Arrange the adspend column in descending order and see which brand has the highest ad spend and in which week_of
+# type your answer below this line
+
+
+
+# interpret the results:
+
+################################################################################
+
+# Query 4. Create a new column called sentiment which is a sum of positive (column name is pos) and negative (column name is neg) mentions,
+# and select only three columns for display, week_of, new_brand and sentiment
+# type your answer below this line
+
+
+
+# interpret the results:
+
+```
+
